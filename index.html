@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <style>
+      :root {
+        --white: hsl(0, 0%, 100%);
+        --light-gray: hsl(212, 45%, 89%);
+        --grayish-blue: hsl(220, 15%, 55%);
+        --dark-blue: hsl(218, 44%, 22%);
+        --title: 22px;
+        --text: 15px;
+        --radius: 16px;
+        --border: 14px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--light-gray);
+        font-family: "Outfit", sans-serif;
+      }
+
+      .attribution {
+        margin-top: 8px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 325px;
+
+        padding: var(--border);
+
+        border-radius: var(--radius);
+
+        background-color: var(--white);
+      }
+
+      .card-container img {
+        border-radius: calc(var(--radius) - var(--border) / 2);
+        width: 100%;
+      }
+
+      .card--text {
+        padding: 0 10px;
+      }
+
+      .card-container:has(h1, h2, h3) {
+        color: var(--dark-blue);
+      }
+
+      .card-container:has(h3, p) {
+        text-align: center;
+      }
+
+      .card-container h3 {
+        font-size: var(--title);
+      }
+
+      .card-container p {
+        color: var(--grayish-blue);
+        font-size: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="card-container">
+      <img
+        src="./images/image-qr-code.png"
+        alt="QR code linked to Fronend Mentor website"
+      />
+      <div class="card--text">
+        <h3>Improve your front-end skills by building projects</h3>
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
+    </article>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kevin Macias A.</a>.
+    </div>
+  </body>
+</html>
